@@ -16,7 +16,7 @@ eve_kernel_config_file: eve-R80-12739.B-chromeos-4.4.config
 eve_kernel_workdir: "{{ main_workdir }}/kernel"
 
 # vars for deb package install
-gh_base_url: "http://xiaoyugan.gz01.bdysite.com/pixelbook-linux/releases/download"
+gh_base_url: "http://106.55.159.2:18080/pixelbook-linux/releases/download"
 gh_release: "v0.1"
 gh_deb_base_url: "{{ gh_base_url }}/{{ gh_release }}/"
 kernel_deb_revision: "{{ eve_kernel_name }}"
