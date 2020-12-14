@@ -18,12 +18,19 @@ eve_kernel_workdir: "{{ main_workdir }}/kernel"
 # vars for deb package install
 gh_base_url: "http://106.55.159.2:18080/pixelbook-linux/releases/download"
 gh_release: "v0.1"
+# 拼接结果 http://106.55.159.2:18080/pixelbook-linux/releases/download/v0.1/
 gh_deb_base_url: "{{ gh_base_url }}/{{ gh_release }}/"
 kernel_deb_revision: "{{ eve_kernel_name }}"
+# 拼接结果 4.4.178chromium-g4245c5e1_4.4.178chromium-g4245c5e1_amd64
 kernel_deb_arch: "{{ kernel_deb_revision }}_{{ kernel_deb_revision }}_amd64"
+# 拼接结果 域名子目录/linux-image-4.4.178chromium-g4245c5e1_4.4.178chromium-g4245c5e1_amd64.deb
 kernel_image_deb: "{{ gh_deb_base_url }}/linux-image-{{ kernel_deb_arch }}.deb"
+# 拼接结果 域名子目录/linux-image-4.4.178chromium-g4245c5e1-dbg_4.4.178chromium-g4245c5e1_amd64.deb
 kernel_debug_deb: "{{ gh_deb_base_url }}/linux-image-{{ kernel_deb_revision }}-dbg_{{ kernel_deb_revision }}_amd64.deb"
+# 拼接结果 域名子目录/linux-headers-4.4.178chromium-g4245c5e1_4.4.178chromium-g4245c5e1_amd64.deb
 kernel_headers_deb: "{{ gh_deb_base_url }}/linux-headers-{{ kernel_deb_arch }}.deb"
+# 拼接结果 域名子目录/linux-firmware-image-4.4.178chromium-g4245c5e1_4.4.178chromium-g4245c5e1_amd64.deb
 kernel_firmware_deb: "{{ gh_deb_base_url }}/linux-firmware-image-{{ kernel_deb_arch }}.deb"
+# 拼接结果 域名子目录/linux-libc-dev_4.4.178chromium-g4245c5e1_amd64.deb
 kernel_libc_dev_deb: "{{ gh_deb_base_url }}/linux-libc-dev_{{ kernel_deb_revision }}_amd64.deb"
 
